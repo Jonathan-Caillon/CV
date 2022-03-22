@@ -237,7 +237,6 @@ p {
 }
 .contenu {
   position: relative;
-  height: 100vh;
   z-index: 10;
   background-color: #0d1117;
 }
@@ -256,6 +255,9 @@ p {
   max-width: 900px;
   padding: 50px;
   margin: auto;
+}
+.description .row {
+  margin-bottom: 24px;
 }
 .description .press {
   display: flex;
@@ -447,19 +449,19 @@ p {
   font-family: var(--font);
 }
 .description .press .presentation .presentation-links .wrapper .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner svg {
-  margin-right: 4px;
+  margin-right: 8px;
   fill: white;
 }
 .description .press .right-presentation {
   width: 40%;
   position: relative;
   z-index: 11;
-  min-height: 250px;
   padding: 20px;
 }
 .description .press .right-presentation .presentation-image {
   width: 100%;
   height: 100%;
+  min-height: 200px;
 }
 .description .press .right-presentation .presentation-image .image {
   position: absolute;
@@ -500,9 +502,62 @@ p {
 .description .press .right-presentation .presentation-image:hover::before {
   transform: translateX(8px) translateY(8px);
 }
+.description .competences {
+  padding: 20px;
+}
+.description .competences .tableau ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.description .competences .tableau ul li {
+  width: 16.6666666667%;
+  text-decoration: none;
+  list-style: none;
+  color: var(--titre);
+  padding: 8px;
+}
+.description .competences .tableau ul li .logo {
+  border-radius: 4px;
+  background-color: #313131;
+  transition: 0.5s;
+  padding: 8px;
+  height: 100%;
+}
+.description .competences .tableau ul li .logo svg {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.9);
+  transition: 0.5s;
+}
+.description .competences .tableau ul li .logo:hover svg {
+  filter: none;
+}
+.description .competences .tableau ul li .logo:hover {
+  transform: translateY(-5px);
+}
 
 @media (max-width: 767px) {
   .description {
     padding: 0 10px 10px 10px;
+  }
+  .description .press {
+    display: flex;
+    flex-direction: column;
+  }
+  .description .press .presentation {
+    width: 100%;
+  }
+  .description .press .right-presentation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .description .press .right-presentation .presentation-image {
+    max-width: 300px;
+  }
+  .description .competences .tableau ul li {
+    width: 25%;
   }
 }/*# sourceMappingURL=style.css.map */
