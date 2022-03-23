@@ -595,10 +595,11 @@ a:hover {
 
     & .right-presentation {
       width: 40%;
-      position: relative;
       z-index: 11;
       padding: 20px;
       & .presentation-image {
+        position: relative;
+
         width: 100%;
         height: 100%;
         min-height: 200px;
@@ -709,7 +710,7 @@ a:hover {
         z-index: 20;
         width: 50%;
         & .texte {
-          background-color: #141b24;
+          background-color: var(--bg-lighter);
           padding: 20px;
           border-radius: 4px;
         }
@@ -787,4 +788,9 @@ a:hover {
       }
     }
   }
+}
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: var(--bg-lighter);
 }
