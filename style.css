@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "Calibre";
-  src: url("./fonts/CalibreRegular.otf");
+  src: url("./fonts/Inter.ttf");
 }
 :root {
   --color-landing: orange;
@@ -35,7 +35,7 @@ h2 span {
 
 p {
   color: var(--texte);
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   margin-bottom: 12px;
   font-family: "Calibre";
 }
@@ -299,19 +299,20 @@ a:hover {
 }
 
 .description {
-  max-width: 900px;
-  padding: 50px;
+  max-width: 1000px;
+  padding: 50px 50px 0 50px;
   margin: auto;
+  overflow: hidden;
 }
 .description .row {
   margin-bottom: 24px;
+  padding: 20px;
 }
 .description .press {
   display: flex;
 }
 .description .press .presentation {
   width: 60%;
-  padding: 20px;
 }
 .description .press .presentation .presentation-links {
   display: flex;
@@ -549,9 +550,6 @@ a:hover {
 .description .press .right-presentation .presentation-image:hover::before {
   transform: translateX(8px) translateY(8px);
 }
-.description .competences {
-  padding: 20px;
-}
 .description .competences .tableau ul {
   display: flex;
   flex-wrap: wrap;
@@ -569,7 +567,7 @@ a:hover {
   background-color: var(--bg-lighter);
   transition: 0.5s;
   padding: 8px;
-  height: 100%;
+  aspect-ratio: 1;
 }
 .description .competences .tableau ul li .logo svg {
   width: 100%;
@@ -583,9 +581,6 @@ a:hover {
 .description .competences .tableau ul li .logo:hover {
   transform: translateY(-5px);
   background-color: #253548;
-}
-.description .realisations {
-  padding: 20px;
 }
 .description .realisations .right {
   display: flex;
@@ -629,10 +624,13 @@ a:hover {
 }
 .description .realisations .projet .content ul li {
   color: var(--texte);
-  font-size: 0.875rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .description .realisations .projet .content ul li a svg {
   fill: var(--color-landing);
+  width: 30px;
+  height: 30px;
 }
 .description .realisations .projet .content ul li a:hover svg {
   fill: var(--titre);
@@ -655,6 +653,7 @@ a:hover {
      object-fit: cover;
   filter: grayscale(1);
   transition: 0.5s;
+  border-radius: 4px;
 }
 .description .realisations .projet .content-image img:hover {
   transform: scale(1.1);
@@ -663,7 +662,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .description {
-    padding: 0 10px 10px 10px;
+    padding: 0 10px;
   }
   .description .press {
     display: flex;
@@ -684,9 +683,31 @@ a:hover {
   .description .competences .tableau ul li {
     width: 25%;
   }
+  .description .realisations .projet {
+    margin: 32px 0 64px 0;
+  }
+  .description .realisations .projet .content {
+    width: 100%;
+    background-color: rgba(20, 27, 36, 0.8);
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .description .realisations .projet .content .texte {
+    background: none;
+    padding: 0;
+  }
+  .description .realisations .projet .content-right {
+    align-items: flex-start;
+  }
+  .description .realisations .projet .content-right ul {
+    flex-direction: row;
+  }
+  .description .realisations .projet .content-image {
+    width: 100%;
+  }
 }
 footer {
-  height: 200px;
+  height: 100px;
   width: 100%;
   background-color: var(--bg-lighter);
 }/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Calibre";
-  src: url("./fonts/CalibreRegular.otf");
+  src: url("./fonts/Inter.ttf");
 }
 :root {
   --color-landing: orange;
@@ -36,7 +36,7 @@ h2 {
 
 p {
   color: var(--texte);
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   margin-bottom: 12px;
   font-family: "Calibre";
 }
@@ -263,17 +263,18 @@ a:hover {
 }
 
 .description {
-  max-width: 900px;
-  padding: 50px;
+  max-width: 1000px;
+  padding: 50px 50px 0 50px;
   margin: auto;
+  overflow: hidden;
   & .row {
     margin-bottom: 24px;
+    padding: 20px;
   }
   & .press {
     display: flex;
     & .presentation {
       width: 60%;
-      padding: 20px;
       & .presentation-links {
         display: flex;
         flex-wrap: wrap;
@@ -645,7 +646,6 @@ a:hover {
     }
   }
   & .competences {
-    padding: 20px;
     & .tableau {
       ul {
         display: flex;
@@ -662,7 +662,7 @@ a:hover {
             background-color: var(--bg-lighter);
             transition: 0.5s;
             padding: 8px;
-            height: 100%;
+            aspect-ratio: 1;
             & svg {
               width: 100%;
               height: 100%;
@@ -682,7 +682,6 @@ a:hover {
     }
   }
   & .realisations {
-    padding: 20px;
     & .right {
       display: flex;
       flex-direction: row-reverse;
@@ -724,9 +723,12 @@ a:hover {
 
           & li {
             color: var(--texte);
-            font-size: 0.875rem;
+            font-size: 1rem;
+            font-weight: bold;
             & a svg {
               fill: var(--color-landing);
+              width: 30px;
+              height: 30px;
             }
             & a:hover svg {
               fill: var(--titre);
@@ -749,6 +751,7 @@ a:hover {
           object-fit: cover;
           filter: grayscale(1);
           transition: 0.5s;
+          border-radius: 4px;
         }
         & img:hover {
           transform: scale(1.1);
@@ -761,7 +764,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .description {
-    padding: 0 10px 10px 10px;
+    padding: 0 10px;
     & .press {
       display: flex;
       flex-direction: column;
@@ -787,10 +790,34 @@ a:hover {
         }
       }
     }
+    & .realisations {
+      & .projet {
+        margin: 32px 0 64px 0;
+        & .content {
+          width: 100%;
+          background-color: rgba(20, 27, 36, 0.8);
+          padding: 20px;
+          border-radius: 4px;
+          & .texte {
+            background: none;
+            padding: 0;
+          }
+        }
+        & .content-right {
+          align-items: flex-start;
+          & ul {
+            flex-direction: row;
+          }
+        }
+        & .content-image {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 footer {
-  height: 200px;
+  height: 100px;
   width: 100%;
   background-color: var(--bg-lighter);
 }
