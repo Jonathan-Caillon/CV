@@ -98,3 +98,9 @@ for (let i = 0; i < buttons.length; i++) {
     this.className = clearedClassList + " " + newClass;
   });
 }
+
+const a = () => {
+  setTimeout(() => {
+    console.log(buttons);
+  });
+};

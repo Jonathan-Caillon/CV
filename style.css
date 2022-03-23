@@ -1,8 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/Rubik.ttf");
+}
+@font-face {
+  font-family: "Calibre";
+  src: url("./fonts/CalibreRegular.otf");
+}
 :root {
   --color-landing: orange;
-  --titre: #c9d1d9;
-  --texte: #8b949e;
+  --bg-lighter: #141b24;
+  --bg: #0d1117;
+  --titre: #dae2eb;
+  --texte: #abb6c2;
   --font: "Rubik", sans-serif;
 }
 
@@ -13,14 +22,51 @@
 }
 
 h2 {
-  color: var(--color-landing);
-  margin-bottom: 16px;
+  color: var(--titre);
+  margin-bottom: 32px;
+  font-size: 1.75rem;
   font-family: var(--font);
+}
+h2 span {
+  color: var(--texte);
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 p {
-  color: var(--titre);
+  color: var(--texte);
+  font-size: 0.875rem;
   margin-bottom: 12px;
+  font-family: "Calibre";
+}
+
+ul {
+  margin-bottom: 8px;
+}
+
+li {
+  font-family: "Calibre";
+}
+
+h3 {
+  padding-top: 8px;
+  color: var(--titre);
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+h3 span {
+  color: var(--color-landing);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+a {
+  color: var(--color-landing);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--titre);
 }
 
 .landing-page {
@@ -85,6 +131,7 @@ p {
 .landing-title p {
   text-shadow: 2px 2px 4px black;
   font-size: 2rem;
+  font-weight: bold;
   color: var(--color-landing);
 }
 
@@ -238,13 +285,13 @@ p {
 .contenu {
   position: relative;
   z-index: 10;
-  background-color: #0d1117;
+  background-color: var(--bg);
 }
 
 .transition {
   height: 120px;
   width: 100%;
-  background: linear-gradient(#231f42, #0d1117);
+  background: linear-gradient(#231f42, var(--bg));
 }
 
 .btn {
@@ -279,7 +326,7 @@ p {
   background-color: black;
 }
 .description .press .presentation .presentation-links .wrapper .retro-btn.github .btn .btn-inner .content-wrapper .btn-content {
-  background-color: #4f4f4f;
+  background-color: #333;
 }
 .description .press .presentation .presentation-links .wrapper .retro-btn.linkedin .btn .btn-inner .content-wrapper:before {
   background-color: black;
@@ -519,7 +566,7 @@ p {
 }
 .description .competences .tableau ul li .logo {
   border-radius: 4px;
-  background-color: #313131;
+  background-color: var(--bg-lighter);
   transition: 0.5s;
   padding: 8px;
   height: 100%;
@@ -535,6 +582,83 @@ p {
 }
 .description .competences .tableau ul li .logo:hover {
   transform: translateY(-5px);
+  background-color: #253548;
+}
+.description .realisations {
+  padding: 20px;
+}
+.description .realisations .right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.description .realisations .img-left {
+  left: 0;
+}
+.description .realisations .img-right {
+  right: 0;
+}
+.description .realisations .projet {
+  position: relative;
+  margin: 32px 0 128px 0;
+}
+.description .realisations .projet .content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.description .realisations .projet .content-right ul {
+  flex-direction: row-reverse;
+}
+.description .realisations .projet .content {
+  position: relative;
+  z-index: 20;
+  width: 50%;
+}
+.description .realisations .projet .content .texte {
+  background-color: #141b24;
+  padding: 20px;
+  border-radius: 4px;
+}
+.description .realisations .projet .content ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 10px;
+}
+.description .realisations .projet .content ul li {
+  color: var(--texte);
+  font-size: 0.875rem;
+}
+.description .realisations .projet .content ul li a svg {
+  fill: var(--color-landing);
+}
+.description .realisations .projet .content ul li a:hover svg {
+  fill: var(--titre);
+}
+.description .realisations .projet .content-image {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  z-index: 19;
+  top: 0;
+  overflow: hidden;
+}
+.description .realisations .projet .content-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.description .realisations .projet .content-image img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
 }
 
 @media (max-width: 767px) {
