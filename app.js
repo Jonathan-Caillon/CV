@@ -49,14 +49,13 @@ const castParallax = () => {
 window.onload = function () {
   setTimeout(() => {
     document.querySelector(".loader").style.display = "none";
+    castParallax();
+    let title = document.querySelector(".title-name");
+    title.style.transition = "4s";
+    title.style.opacity = 1;
+    title.style.transform = "none";
   }, 1000);
   document.querySelector(".site").style.display = "block";
-
-  castParallax();
-  let title = document.querySelector(".title-name");
-  title.style.transition = "4s";
-  title.style.opacity = 1;
-  title.style.transform = "none";
 };
 
 //
