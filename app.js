@@ -48,13 +48,18 @@ const castParallax = () => {
 
 window.onload = function () {
   setTimeout(() => {
-    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loader").style.transition = "0.8s";
+    document.querySelector(".loader").style.opacity = "0";
     castParallax();
     let title = document.querySelector(".title-name");
-    title.style.transition = "4s";
+    title.style.transition = "5s";
     title.style.opacity = 1;
     title.style.transform = "none";
+    setTimeout(() => {
+      document.querySelector(".loader").style.display = "none";
+    }, 2000);
   }, 1000);
+
   document.querySelector(".site").style.display = "block";
 };
 
