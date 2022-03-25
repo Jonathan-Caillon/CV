@@ -19,7 +19,7 @@ AOS.init({
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
-function castParallax() {
+const castParallax = () => {
   window.addEventListener("scroll", function () {
     let top = this.scrollY;
 
@@ -44,13 +44,16 @@ function castParallax() {
       );
     }
   });
-}
-
-document.body.onload = castParallax();
+};
 
 window.onload = function () {
-  let title = document.querySelector(".title-name");
+  setTimeout(() => {
+    document.querySelector(".loader").style.display = "none";
+  }, 1000);
+  document.querySelector(".site").style.display = "block";
 
+  castParallax();
+  let title = document.querySelector(".title-name");
   title.style.transition = "4s";
   title.style.opacity = 1;
   title.style.transform = "none";
