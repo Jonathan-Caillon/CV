@@ -3,7 +3,7 @@
   src: url("./fonts/Rubik.ttf");
 }
 @font-face {
-  font-family: "Calibre";
+  font-family: "Inter";
   src: url("./fonts/Inter.ttf");
 }
 :root {
@@ -12,7 +12,8 @@
   --bg: #0d1117;
   --titre: #dae2eb;
   --texte: #abb6c2;
-  --font: "Rubik", sans-serif;
+  --font-title: "Rubik", sans-serif;
+  --font-texte: "Inter", sans-serif;
 }
 
 * {
@@ -25,7 +26,7 @@ h2 {
   color: var(--titre);
   margin-bottom: 32px;
   font-size: 1.75rem;
-  font-family: var(--font);
+  font-family: var(--font-title);
 }
 h2 span {
   color: var(--texte);
@@ -37,7 +38,7 @@ p {
   color: var(--texte);
   font-size: 1rem;
   margin-bottom: 12px;
-  font-family: "Calibre";
+  font-family: var(--font-texte);
 }
 
 ul {
@@ -45,11 +46,11 @@ ul {
 }
 
 li {
-  font-family: "Calibre";
+  font-family: var(--font-texte);
 }
 
 h3 {
-  font-family: var(--font);
+  font-family: var(--font-title);
   padding-top: 8px;
   color: var(--titre);
   margin-bottom: 16px;
@@ -62,7 +63,7 @@ h3 span {
 }
 
 a {
-  font-family: var(--font);
+  font-family: var(--font-title);
   color: var(--color-landing);
   text-decoration: none;
 }
@@ -149,7 +150,7 @@ a:hover {
   z-index: 7;
   transform: translate3d(-50%, 0px, 0px);
   text-align: center;
-  font-family: var(--font);
+  font-family: var(--font-title);
   pointer-events: none;
 }
 
@@ -496,7 +497,7 @@ a:hover {
 .description .press .presentation .presentation-links .wrapper .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner {
   display: flex;
   transition: opacity 75ms ease-out 0.1125s;
-  font-family: var(--font);
+  font-family: var(--font-title);
 }
 .description .press .presentation .presentation-links .wrapper .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner svg {
   margin-right: 8px;

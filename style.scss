@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: "Calibre";
+  font-family: "Inter";
   src: url("./fonts/Inter.ttf");
 }
 :root {
@@ -13,7 +13,8 @@
   --bg: #0d1117;
   --titre: #dae2eb;
   --texte: #abb6c2;
-  --font: "Rubik", sans-serif;
+  --font-title: "Rubik", sans-serif;
+  --font-texte: "Inter", sans-serif;
 }
 
 * {
@@ -26,7 +27,7 @@ h2 {
   color: var(--titre);
   margin-bottom: 32px;
   font-size: 1.75rem;
-  font-family: var(--font);
+  font-family: var(--font-title);
   & span {
     color: var(--texte);
     font-size: 1rem;
@@ -38,18 +39,18 @@ p {
   color: var(--texte);
   font-size: 1rem;
   margin-bottom: 12px;
-  font-family: "Calibre";
+  font-family: var(--font-texte);
 }
 ul {
   margin-bottom: 8px;
 }
 
 li {
-  font-family: "Calibre";
+  font-family: var(--font-texte);
 }
 
 h3 {
-  font-family: var(--font);
+  font-family: var(--font-title);
 
   padding-top: 8px;
   color: var(--titre);
@@ -62,7 +63,7 @@ h3 {
   }
 }
 a {
-  font-family: var(--font);
+  font-family: var(--font-title);
   color: var(--color-landing);
   text-decoration: none;
 }
@@ -141,7 +142,7 @@ a:hover {
   z-index: 7;
   transform: translate3d(-50%, 0px, 0px);
   text-align: center;
-  font-family: var(--font);
+  font-family: var(--font-title);
   pointer-events: none;
 }
 .landing-svg {
@@ -582,7 +583,7 @@ a:hover {
                       display: flex;
                       -webkit-transition: opacity 75ms ease-out 0.1125s;
                       transition: opacity 75ms ease-out 0.1125s;
-                      font-family: var(--font);
+                      font-family: var(--font-title);
                       & svg {
                         margin-right: 8px;
                         fill: white;

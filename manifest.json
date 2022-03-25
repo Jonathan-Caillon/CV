@@ -1,0 +1,10 @@
+{
+  "name": "Jonathan CAILLON",
+  "description": "Bienvenue sur mon Portfolio, je m'appelle Jonathan CAILLON et je suis actuellement en formation Développeur web et web mobile.",
+  "short_name": "JC",
+  "theme_color": "#141b24",
+  "background_color": "#0d1117",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}
