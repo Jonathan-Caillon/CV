@@ -20,7 +20,7 @@ AOS.init({
 });
 
 const castParallax = () => {
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", () => {
     let top = this.scrollY;
 
     let layers = document.getElementsByClassName("parallax");
